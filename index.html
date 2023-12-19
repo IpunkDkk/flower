@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/flowers.png" type="image/x-icon" />
+    <title>Flowers</title>
+  </head>
+  <body>
+    <div class="greetings">
+      <!-- silahkan menambah kata sesuai keinginan dengan <span>text...</span -->
+      <span>H</span>
+      <span>A</span>
+      <span>L</span>
+      <span>L</span>
+      <span>O</span>
+    </div>
+    <div class="description">
+      <span>Aku ada hadiah spesial buat kamu!!</span>
+    </div>
+    <div class="password-form">
+      <form id="passwordForm">
+        <label for="password">Masukkan password:</label>
+        <input type="password" id="password" name="password" required />
+        <button type="button" onclick="checkPassword()">Submit</button>
+      </form>
+    </div>
+
+    <div class="button" id="redirectButton" style="display: none">
+      <button>
+        <a href="flower.html">Klik disini</a>
+      </button>
+    </div>
+
+    <script>
+      function checkPassword() {
+        var enteredPassword = document.getElementById("password").value;
+        // Replace "your_secret_password" with the actual password
+        var correctPassword = "your_secret_password";
+
+        if (enteredPassword === correctPassword) {
+          // Password is correct, show the redirect button
+          document.getElementById("passwordForm").style.display = "none";
+          document.getElementById("redirectButton").style.display = "block";
+        } else {
+          // Password is incorrect, you can show an error message here
+          alert("Password incorrect. Try again.");
+        }
+      }
+    </script>
+  </body>
+</html>
